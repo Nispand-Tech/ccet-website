@@ -61,6 +61,7 @@ const Header = () => {
 
       <div className="hidden lg:flex flex-col items-center px-2 py-3 max-w-[1436px] mx-auto">
         <div className="flex w-full items-center justify-center gap-2">
+          {/* Left Logo */}
           <div className="mx-14 min-w-[96px]">
             <img src={CCETLogo} alt="Logo" className="h-24 object-contain" />
           </div>
