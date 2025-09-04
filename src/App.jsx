@@ -30,6 +30,8 @@ import Tenders from "./pages/Tenders/Tenders.jsx";
 import History from "./pages/History/History.jsx";
 import StudentChaptersandClubs from "./pages/StudentChaptersandClubs/StudentChaptersandClubs.jsx";
 
+import RulesPolicies from "./pages/RulesandPolicies.jsx";
+
 function App() {
   return (
     <HashRouter>
@@ -292,7 +294,17 @@ function App() {
           element={<StudentChaptersandClubs />}
         />
 
-        {/* Fallback */}
+        <Route
+          path="/rules-policies"
+          element={
+            <>
+              <Header />
+              <RulesPolicies />
+              <Footer />
+            </>
+          }
+        />
+
         <Route
           path="*"
           element={
