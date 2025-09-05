@@ -31,7 +31,11 @@ const AboutUsMenu = () => {
         <span key="officials" className="block w-full cursor-default">
           Officials at CCET
         </span>,
-        <Link to="/about/academic-heads" className="block w-full" key="academic-heads">
+        <Link
+          to="/about/academic-heads"
+          className="block w-full"
+          key="academic-heads"
+        >
           Academic Heads
         </Link>,
 
@@ -49,7 +53,7 @@ const AboutUsMenu = () => {
               </li>
             </ul>
           )}
-        </div>
+        </div>,
       ],
     },
     {
@@ -67,13 +71,17 @@ const AboutUsMenu = () => {
         >
           Library
         </a>,
-        <span key="classrooms" className="block w-full cursor-default">
+        <Link to="/classrooms" className="block w-full" key="classrooms">
           Class Rooms
-        </span>,
+        </Link>,
         <span key="canteen" className="block w-full cursor-default">
           Canteen
         </span>,
-        <Link to="/infrastructure" className="block w-full" key="infrastructure">
+        <Link
+          to="/infrastructure"
+          className="block w-full"
+          key="infrastructure"
+        >
           Infrastructure
         </Link>,
         <a
@@ -85,7 +93,11 @@ const AboutUsMenu = () => {
         >
           Policy on use of IT Resources
         </a>,
-        <Link to="/sports-facility" className="block w-full" key="sports-facility">
+        <Link
+          to="/sports-facility"
+          className="block w-full"
+          key="sports-facility"
+        >
           Sports Facility
         </Link>,
       ],
