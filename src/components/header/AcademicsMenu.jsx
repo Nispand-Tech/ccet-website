@@ -1,46 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const AcademicsMenu = () => {
   const sections = [
     {
-      title: 'Academic Departments',
+      title: "Academic Departments",
       links: [
-        'Computer Science Engineering',
-        'Mechanical Engineering',
-        { name: 'Electronics and Communication Engineering', path: '/ece' },
-        'Civil Engineering',
-        'Applied Science',
+        { name: "Computer Science Engineering", path: "/cse" },
+        { name: "Mechanical Engineering", path: "/mech" },
+        { name: "Electronics and Communication Engineering", path: "/ece" },
+        { name: "Civil Engineering", path: "/civil" },
+        { name: "Applied Science", path: "/applied-science" },
       ],
     },
     {
-      title: 'Academics',
+      title: "Academics",
       links: [
-        { name: 'Convocation 2023', path: '/convocation' },
-        { name: 'Students Feedback', path: 'https://smartcookie.in/' },
-        'Examination',
-        { name: 'E-Akademik', path: 'https://eakadamik.in/ccet/' },
-        'E-Cell',
-        { name: 'NIRF', path: '/academics/nirf' },
-        { name: 'FAQs', path: '/faq' },
+        { name: "Convocation 2023", path: "/convocation" },
+        { name: "Students Feedback", path: "https://smartcookie.in/" },
+        { name: "Examination", path: "/examination" },
+        { name: "E-Akademik", path: "https://eakadamik.in/ccet/" },
+        { name: "E-Cell", path: "/ecell" },
+        { name: "NIRF", path: "/academics/nirf" },
+        { name: "FAQs", path: "/faq" },
       ],
     },
     {
-      title: 'Mandatory Disclosure',
+      title: "Mandatory Disclosure",
       links: [
-        'EoA Report 2024-25',
-        'Application Part-1',
-        'Application Part-2',
-        'OLD AICTE EoAs',
+        { name: "EoA Report 2024-25", path: "/eoa-2024" },
+        { name: "Application Part-1", path: "/application-part1" },
+        { name: "Application Part-2", path: "/application-part2" },
+        { name: "OLD AICTE EoAs", path: "/old-aicte" },
       ],
     },
     {
-      title: 'Overview',
+      title: "Overview",
       links: [
-        { name: 'Courses Offered', path: '/courses' },
-        'Academic Calendar',
-        { name: 'Academic Prospectus', path: '/prospectus' },
-        { name: 'Affiliating University', path: 'https://puchd.ac.in/' },
+        { name: "Courses Offered", path: "/courses" },
+        { name: "Academic Calendar", path: "/calendar" },
+        { name: "Academic Prospectus", path: "/prospectus" },
+        { name: "Affiliating University", path: "https://puchd.ac.in/" },
       ],
     },
   ];
@@ -58,9 +58,7 @@ const AcademicsMenu = () => {
                 key={j}
                 className="hover:bg-[#FB923C] hover:text-white cursor-pointer transition-colors duration-200 px-2 py-1 rounded"
               >
-                {typeof link === 'string' ? (
-                  link
-                ) : link.path.startsWith('http') ? (
+                {link.path.startsWith("http") ? (
                   <a
                     href={link.path}
                     target="_blank"
