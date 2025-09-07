@@ -6,11 +6,11 @@ const AcademicsMenu = () => {
     {
       title: "Academic Departments",
       links: [
-        { name: "Computer Science Engineering", path: "/cse" },
-        { name: "Mechanical Engineering", path: "/mech" },
+        { name: "Computer Science Engineering", path: "/academics/cse/overview" },
+        { name: "Mechanical Engineering", path: "/academics/mechanical/overview" },
         { name: "Electronics and Communication Engineering", path: "/ece" },
-        { name: "Civil Engineering", path: "/civil" },
-        { name: "Applied Science", path: "/applied-science" },
+        { name: "Civil Engineering", path: "/academics/civil/overview" },
+        { name: "Applied Science", path: "/academics/appliedscience/overview" },
       ],
     },
     {
@@ -38,7 +38,7 @@ const AcademicsMenu = () => {
       title: "Overview",
       links: [
         { name: "Courses Offered", path: "/courses" },
-        { name: "Academic Calendar", path: "/calendar" },
+        { name: "Academic Calendar", path: "/academics/calendar" },
         { name: "Academic Prospectus", path: "/prospectus" },
         { name: "Affiliating University", path: "https://puchd.ac.in/" },
       ],
