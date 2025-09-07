@@ -113,6 +113,8 @@ function App() {
                 <Route path="/life/virtual-tour" element={<CampusVirtualTour/>}/>
                 <Route path="/about/campus-map" element={<CampusMap />}  />
                 <Route path="/about/canteen" element={<Canteen />}  />
+                <Route path="/about/classrooms" element={<Classrooms />} />
+
 
                 {/* Programmes */}
                 <Route path="/programmes/pu-leet" element={<Leet/>}/>
