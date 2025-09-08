@@ -36,6 +36,8 @@ import NewsDetails from "./pages/Home/NewsDetails.jsx";
 import Canteen from "./pages/Canteen/Canteen.jsx";
 import EventCalendar from "./pages/EventCalendar/EventCalendar.jsx";
 import AcademicCalendar from "./pages/AcademicCalendar/AcademicCalendar.jsx";
+import StudentCouncil from "./pages/Students-Section/StudentCouncil.jsx";
+
 
 
 // ECE Department
@@ -105,6 +107,8 @@ function App() {
                 <Route path="/anti-ragging" element={<AntiRagging/>}/>
                 <Route path="/anti-ragging-committee" element={<AntiRaggingCommittee/>}/>
                 <Route path="/student-chapters-clubs" element={<StudentChaptersandClubs/>}/>
+                <Route path="/student-council" element={<StudentCouncil />} />
+
 
                 {/* About Section */}
                 <Route path="/about/academic-heads" element={<Academicheads/>}/>
