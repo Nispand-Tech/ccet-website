@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import CCETLogo from '../../assets/header/CCET-Logo.png';
-import IndianEmblem from '../../assets/header/Indian-Emblem.png';
+
+
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import CCETLogo from "../../assets/header/ccetLogo.png";
+import IndianEmblem from "../../assets/header/Indian-Emblem.png";
+
 
 // For Desktops
 import AboutUsMenu from './AboutUsMenu';
@@ -91,7 +94,6 @@ const Header = () => {
 					links: [
 						{ name: 'Convocation 2023', path: '/academics/convocation-2023' },
 						{ name: 'Students Feedback', path: '/academics/feedback' },
-						{ name: 'Examination', path: '/academics/examination' },
 						{ name: 'E-Akademik', path: '/academics/e-akademik' },
 						{ name: 'E-Cell', path: '/academics/e-cell' },
 						{ name: 'NIRF', path: '/academics/nirf' },
@@ -101,9 +103,10 @@ const Header = () => {
 				{
 					title: 'Mandatory Disclosure',
 					links: [
-						{ name: 'EoA Report 2024-25', path: '/academics/eoa-report-2024-25' },
+						{ name: 'EoA Report 2025-26', path: '/academics/eoa-report-latest' },
 						{ name: 'Application Part-1', path: '/academics/application-part-1' },
 						{ name: 'Application Part-2', path: '/academics/application-part-2' },
+						{ name: 'Deficiency Report', path: '/academics/deficiency-report' },
 						{ name: 'OLD AICTE EoAs', path: '/academics/old-aicte-eoas' }
 					],
 				},
@@ -126,8 +129,8 @@ const Header = () => {
 					title: 'Academics',
 					links: [
 						{ name: 'Student Forms', path: '/student-forms' },
-						{ name: 'Vidya Lakshmi (Education Loan)', path: '/vidya-lakshmi' },
-						{ name: 'National Apprenticeship Training', path: '/national-apprenticeship' },
+						{ name: 'Vidya Lakshmi (Education Loan)',external: true, url: 'https://pmvidyalaxmi.co.in/StudentLogin.aspx' },
+						{name: 'National Apprenticeship Training', external: true, url: 'https://nats.education.gov.in/'},
 						{ name: 'Scholarships', path: '/scholarships' },
 						{ name: 'Fit India', path: '/fit-india' }
 					],
@@ -146,21 +149,21 @@ const Header = () => {
 						{ name: 'Anti Ragging', path: '/student-welfare/anti-ragging' },
 						{ name: 'Anti Ragging Committee', path: '/student-welfare/anti-ragging-committee' },
 						{ name: 'Student Fee Payment (HDFC)', path: '/student-welfare/fee-payment' },
-						{ name: 'Application form to be a New Voter', path: '/student-welfare/new-voter' }
+						{ name: 'Application form to be a New Voter', external: true, url: 'https://voters.eci.gov.in/' }
 					],
 				},
 				{
 					title: 'Hostel',
 					links: [
-						{ name: 'Boys Hostel', path: '/hostel/boys' },
-						{ name: 'Girls Hostel', path: '/hostel/girls' }
+						{ name: 'Boys Hostel', path: "/boys-hostel" },
+						{ name: 'Girls Hostel', path: '/girls-hostel' }
 					],
 				},
 				{
 					title: 'Events',
 					links: [
 						{ name: 'Student Chapters/Clubs', path: '/events/clubs' },
-						{ name: 'Apratim', path: '/events/apratim' },
+						{ name: 'Apratim', external: true, url: 'https://apratim.ccet.ac.in/' },
 						{ name: 'ACM @ CCET', path: 'https://ccet.acm.org/', external: true },
 						{ name: 'ASME @ CCET', path: '/events/asme' },
 						{ name: 'NSS', path: '/events/nss' }
@@ -220,7 +223,6 @@ const Header = () => {
 				{
 					title: 'Old Notices',
 					links: [
-						{ name: 'Forms', path: '/notices/forms' },
 						{ name: 'Tenders', path: '/notices/tenders' },
 						{ name: 'Online Fee Payment Link', path: '/notices/fee-payment' }
 					],
@@ -228,8 +230,8 @@ const Header = () => {
 				{
 					title: 'E-News Letters (pdf\'s)',
 					links: [
-						{ name: 'FingerPrint (Volume-VII, Issue I)', path: '/notices/fingerprint-vol7-i' },
-						{ name: 'FingerPrint (Volume-VII, Issue II)', path: '/notices/fingerprint-vol7-ii' }
+						{ name: 'FingerPrint (Volume-VII, Issue I)', path: "/magazine/fingerprint-vii-1" },
+						{ name: 'FingerPrint (Volume-VII, Issue II)', path: "/magazine/fingerprint-vii-2" }
 					],
 				},
 				{
@@ -278,15 +280,29 @@ const Header = () => {
 		<div className="w-full bg-white md:bg-gradient-to-r md:from-blue-900 md:to-slate-900 relative z-50">
 			{/* Mobile View */}
 			<div className="lg:hidden w-full bg-gradient-to-r from-blue-900 to-slate-900 shadow">
-				<div className="w-full px-4 py-3 flex items-center justify-between">
-					<img src={CCETLogo} alt="CCET Logo" className="h-10 w-auto" />
+
+				<div className="w-full px-2 py-3 flex items-center justify-between">
+					<img
+						src={CCETLogo}
+						alt="CCET Logo"
+						className="h-16 w-auto"
+					/>
+
 					<div className="flex-1 text-center px-2">
-						<h1 className="text-white text-2xl font-serif leading-tight">
+						<h1 className="text-white text-[16px] font-serif leading-snug">
 							Chandigarh College of Engineering and Technology
 						</h1>
-						<p className="text-[20px] text-gray-300 font-serif leading-none mt-1">(PU | Chandigarh)</p>
+
+						<p className="text-[14px] text-gray-300 font-serif leading-none mt-1">
+							(PU | Chandigarh)
+						</p>
 					</div>
-					<img src={IndianEmblem} alt="Indian Emblem" className="h-10 w-auto" />
+					<img
+						src={IndianEmblem}
+						alt="Indian Emblem"
+						className="h-16 w-auto"
+					/>
+
 				</div>
 
 				<div className="w-full flex justify-end pb-3 pr-4">
@@ -307,7 +323,13 @@ const Header = () => {
 			<div className="hidden lg:flex flex-col items-center px-2 py-3 w-full max-w-[1436px] mx-auto">
 				<div className="flex w-full items-center justify-center gap-2">
 					<div className="flex items-center h-full mx-14 min-w-[96px]">
-						<img className="h-24 w-auto object-contain" src={CCETLogo} alt="College Logo" />
+
+						<img
+							className="h-36 w-auto object-contain"
+							src={CCETLogo}
+							alt="College Logo"
+						/>
+
 					</div>
 					<div className="flex flex-col flex-shrink items-center px-2 w-full max-w-[900px]">
 						<h1 className="font-serif text-white text-4xl text-center leading-tight">
@@ -321,7 +343,13 @@ const Header = () => {
 						</div>
 					</div>
 					<div className="flex items-center h-full mx-14 min-w-[96px]">
-						<img className="h-24 w-auto object-contain" src={IndianEmblem} alt="Indian Emblem" />
+
+						<img
+							className="h-34 w-auto object-contain"
+							src={IndianEmblem}
+							alt="Indian Emblem"
+						/>
+
 					</div>
 				</div>
 

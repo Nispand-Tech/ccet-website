@@ -6,29 +6,24 @@ const NoticesMenu = () => {
     {
       title: "Old Notices",
       links: [
-        { name: "Forms", url: "/forms" },
         { name: "Tenders", url: "/notices/tenders" },
-        {
-          name: "Online Fee Payment Link",
-          url: "https://paydirect.eduqfix.com/app/3qTjKfysWsfqEyNTM4giVFX4VGVYGZss5NYRHpY65DaJgmu14S3Ff6NKoVa3l2Ay/6593",
-        },
       ],
     },
     {
       title: "E-News Letters (pdf's)",
       links: [
-        { name: "FingerPrint (Volume-VII, Issue I)", url: "/newsletter/v7-i1" },
+        { name: "FingerPrint (Volume-VII, Issue I)", url: "/magazine/fingerprint-vii-1" },
         {
           name: "FingerPrint (Volume-VII, Issue II)",
-          url: "/newsletter/v7-i2",
+          url: "/magazine/fingerprint-vii-2",
         },
       ],
     },
     {
       title: "Detailed Info (B.E. Exams)",
       links: [
-        { name: "Exam Notice 1", url: "/exam-notice-1" },
-        { name: "Exam Notice 2", url: "/exam-notice-2" },
+        { name: "Exam Notice 1", url: "/notices/exam-notice-1" },
+        { name: "Exam Notice 2", url: "/notices/exam-notice-2" },
       ],
     },
   ];
