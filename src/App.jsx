@@ -34,17 +34,30 @@ import RecentUpdates from "./pages/RecentUpdates.jsx";
 import StudentChaptersandClubs from "./pages/StudentChaptersandClubs/StudentChaptersandClubs.jsx";
 import NewsDetails from "./pages/Home/NewsDetails.jsx";
 import Canteen from "./pages/Canteen/Canteen.jsx";
+import AdmissionNotices from "./pages/AdmissionNotices/AdmissionNotices.jsx";
 import EventCalendar from "./pages/EventCalendar/EventCalendar.jsx";
 import AcademicCalendar from "./pages/AcademicCalendar/AcademicCalendar.jsx";
-
+import StudentCouncil from "./pages/Students-Section/StudentCouncil.jsx";
+import EoaLatest from "./pages/MandatoryDisclosure/EoaLatest.jsx";
+import Partone from "./pages/MandatoryDisclosure/ApplicationPart-1.jsx";
+import Parttwo from "./pages/MandatoryDisclosure/ApplicationPart-2.jsx";
+import DeficiencyReport from "./pages/MandatoryDisclosure/DeficiencyReport.jsx";
+import OldEOA from "./pages/MandatoryDisclosure/OldEoas.jsx";
+import CampusVirtualTour from "./pages/CampusVirtualTour.jsx";
+import Classrooms from "./pages/Classrooms/Classrooms.jsx";
+import CampusMap from "./pages/CampusMap/CampusMap.jsx";
+import StudentWelfare from "./pages/StudentWelfare/StudentWelfare.jsx";
+import BoysHostel from "./pages/BoysHostel/BoysHostel.jsx";
+import GirlsHostel from "./pages/GirlsHostel/GirlsHostel.jsx";
+import FingerPrintIssue1 from "./pages/FingerPrint/FingerPrint1.jsx";
+import FingerPrintIssue2 from "./pages/FingerPrint/FingerPrint2.jsx";
+import ExamNotice1 from "./pages/ExamNotice/ExamNotice1.jsx";
+import ExamNotice2 from "./pages/ExamNotice/ExamNotice2.jsx";
 
 // ECE Department
 import EceOverview from "./pages/ECE-Department/ece-overview.jsx";
 import ECE_Faculty from "./pages/ECE-Department/ece-faculty.jsx";
 import EceLabs from "./pages/ECE-Department/ece-labs.jsx";
-import CampusVirtualTour from "./pages/CampusVirtualTour.jsx";
-import Classrooms from "./pages/Classrooms/Classrooms.jsx";
-import CampusMap from "./pages/CampusMap/CampusMap.jsx";
 
 //Applied Sciences Department
 import ASOverview from "./pages/AS-Department/ASOverview.jsx";
@@ -54,7 +67,6 @@ import ASLabs from "./pages/AS-Department/ASLabs.jsx";
 import ASResearch from "./pages/AS-Department/ASResearch.jsx";
 import ASSyllabus from "./pages/AS-Department/ASSyllabus.jsx";
 import ASTimeTable from "./pages/AS-Department/ASTimeTable.jsx";
-
 
 //Civil Department
 import CivilOverview from "./pages/Civil-Department/CivilOverview.jsx";
@@ -74,7 +86,6 @@ import MechTimeTable from "./pages/Mech-Department/MechTimeTable.jsx";
 import MechSyllabus from "./pages/Mech-Department/MechSyllabus.jsx";
 import MechResearch from "./pages/Mech-Department/MechResearch.jsx";
 
-
 //CSE Department
 import CseOverview from "./pages/CSE-Department/CseOverview.jsx";
 import CseFaculty from "./pages/CSE-Department/CseFaculty.jsx";
@@ -85,107 +96,125 @@ import CseSyllabus from "./pages/CSE-Department/CseSyllabus.jsx";
 import CseResearch from "./pages/CSE-Department/CseResearch.jsx";
 
 function App() {
-    return (
-        <HashRouter>
-            <Header/>
-            <Routes>
-                {/* Home & Default */}
-                <Route path="/" element={<Home/>}/>
-                <Route path="/event-calendar" element={<EventCalendar/>}/>
-                <Route path="*" element={<NoPage/>}/>
+  return (
+    <HashRouter>
+      <Header />
+      <Routes>
+        {/* Home & Default */}
+        <Route path="/" element={<Home />} />
+        <Route path="/event-calendar" element={<EventCalendar/>}/>
+        <Route path="*" element={<NoPage />} />
 
-                {/* Static Pages */}
-                <Route path="/faq" element={<FAQ/>}/>
-                <Route path="/vision-mission" element={<VisionMission/>}/>
-                <Route path="/nss" element={<Nss/>}/>
-                <Route path="/convocation" element={<Convocation/>}/>
-                <Route path="/contact" element={<ContactUs/>}/>
+        {/* Static Pages */}
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/vision-mission" element={<VisionMission />} />
+        <Route path="/nss" element={<Nss />} />
+        <Route path="/convocation" element={<Convocation />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/admissions/help-desk" element={<HelpDesk />} />
 
-                {/* Student Section */}
-                <Route path="/anti-ragging" element={<AntiRagging/>}/>
-                <Route path="/anti-ragging-committee" element={<AntiRaggingCommittee/>}/>
-                <Route path="/student-chapters-clubs" element={<StudentChaptersandClubs/>}/>
+        {/* Student Section */}
+        <Route path="/anti-ragging" element={<AntiRagging />} />
+        <Route path="/anti-ragging-committee" element={<AntiRaggingCommittee />}/>
+        <Route path="/student-chapters-clubs" element={<StudentChaptersandClubs />}/>
+        <Route path="/student-council" element={<StudentCouncil />} />
+        <Route path="/student-welfare/officials" element={<StudentWelfare/>}/>
+        <Route path="/boys-hostel" element={<BoysHostel/>}/>
+        <Route path="/girls-hostel" element={<GirlsHostel/>}/>
+        <Route path="/sports-facilities" element={<SportsFacility/>}/>
 
-                {/* About Section */}
-                <Route path="/about/academic-heads" element={<Academicheads/>}/>
-                <Route path="/about/principal" element={<Principal/>}/>
-                <Route path="/about/history" element={<History/>}/>
-                <Route path="/life/virtual-tour" element={<CampusVirtualTour/>}/>
-                <Route path="/about/campus-map" element={<CampusMap />}  />
-                <Route path="/about/canteen" element={<Canteen />}  />
+        {/* About Section */}
+        <Route path="/about/academic-heads" element={<Academicheads />} />
+        <Route path="/about/principal" element={<Principal />} />
+        <Route path="/about/history" element={<History />} />
+        <Route path="/life/virtual-tour" element={<CampusVirtualTour />} />
+        <Route path="/about/campus-map" element={<CampusMap />} />
+        <Route path="/about/canteen" element={<Canteen />} />
+        <Route path="/about/classrooms" element={<Classrooms />} />
 
-                {/* Programmes */}
-                <Route path="/programmes/pu-leet" element={<Leet/>}/>
-                <Route path="/programmes/phd" element={<Doctorate/>}/>
-                <Route path="/programmes/degree" element={<Degree/>}/>
+        {/* Programmes */}
+        <Route path="/programmes/pu-leet" element={<Leet />} />
+        <Route path="/programmes/phd" element={<Doctorate />} />
+        <Route path="/programmes/degree" element={<Degree />} />
 
-                {/* Academics */}
-                <Route path="/courses" element={<Courses/>}/>
-                <Route path="/prospectus" element={<AcademicProspectusPage/>}/>
-                <Route path="/academics/nirf" element={<NIRF/>}/>
-                <Route path="/examinations" element={<Examinations/>}/>
-                <Route path="/academics/calendar" element={<AcademicCalendar/>}/>
+        {/* Academics */}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/prospectus" element={<AcademicProspectusPage />} />
+        <Route path="/academics/nirf" element={<NIRF />} />
+        <Route path="/examinations" element={<Examinations />} />
+        <Route path="/academics/calendar" element={<AcademicCalendar/>}/>
+        <Route path="/academics/eoa-report-latest" element={<EoaLatest/>}/>
+        <Route path="/academics/application-part-1" element={<Partone />} />
+        <Route path="/academics/application-part-2" element={<Parttwo />} />
+        <Route path="/academics/deficiency-report" element={<DeficiencyReport />} />
+        <Route path="/academics/old-aicte-eoas" element={<OldEOA />} />
 
-                {/* Facilities */}
-                <Route path="/sports-facility" element={<SportsFacility/>}/>
-                <Route path="/fit-india" element={<FitIndiaPage/>}/>
-                <Route path="/infrastructure" element={<Infrastructure/>}/>
+        {/* Facilities */}
+        <Route path="/fit-india" element={<FitIndiaPage />} />
+        <Route path="/infrastructure" element={<Infrastructure />} />
 
-                {/* Committees & Notices */}
-                <Route path="/notices/tenders" element={<Tenders/>}/>
+        {/* Committees & Notices */}
+        <Route path="/notices/tenders" element={<Tenders />} />
 
-                {/* Others */}
-                <Route path="/helpdesk" element={<HelpDesk/>}/>
-                <Route path="/ecell" element={<ECell/>}/>
+        {/* Others */}
+        <Route path="/admissions/notices" element={<AdmissionNotices />} />
+        <Route path="/helpdesk" element={<HelpDesk />} />
+        <Route path="/ecell" element={<ECell />} />
 
-                {/* News */}
-                <Route path="/news" element={<NewsDetails/>}/>
+        {/* News */}
+        <Route path="/news" element={<NewsDetails />} />
 
-                {/* ECE Department */}
-                <Route path="/ece" element={<EceOverview/>}/>
-                <Route path="/ece/ece-faculty" element={<ECE_Faculty/>}/>
-                <Route path="/ece/ece-labs" element={<EceLabs/>}/>
+        {/* ECE Department */}
+        <Route path="/ece" element={<EceOverview />} />
+        <Route path="/ece/ece-faculty" element={<ECE_Faculty />} />
+        <Route path="/ece/ece-labs" element={<EceLabs />} />
 
-                {/* CSE Department */}
-                <Route path="/academics/cse/overview" element={<CseOverview />} />
-                <Route path="/academics/cse/csefaculty" element={<CseFaculty />}  />
-                <Route path="/academics/cse/hod" element={<CseHod />} />
-                <Route path="/academics/cse/cselabs" element={<CseLabs />}  />
-                <Route path="/academics/cse/csetimetable" element={<CseTimeTable />}  />
-                <Route path="/academics/cse/csesyllabus" element={<CseSyllabus />}  />
-                <Route path="/academics/cse/cseresearch" element={<CseResearch />}  />
+        {/* CSE Department */}
+        <Route path="/academics/cse/overview" element={<CseOverview />} />
+        <Route path="/academics/cse/csefaculty" element={<CseFaculty />} />
+        <Route path="/academics/cse/hod" element={<CseHod />} />
+        <Route path="/academics/cse/cselabs" element={<CseLabs />} />
+        <Route path="/academics/cse/csetimetable" element={<CseTimeTable />} />
+        <Route path="/academics/cse/csesyllabus" element={<CseSyllabus />} />
+        <Route path="/academics/cse/cseresearch" element={<CseResearch />} />
 
-                {/* Civil Department */}
-                <Route path="/academics/civil/overview" element={<CivilOverview />} />
-                <Route path="/academics/civil/hod" element={<CivilHod />} />
-                <Route path="/academics/civil/civilfaculty" element={<CivilFaculty />}  />
-                <Route path="/academics/civil/civillabs" element={<CivilLabs />}  />
-                <Route path="/academics/civil/civilresearch" element={<CivilResearch />}  />
-                <Route path="/academics/civil/civilsyllabus" element={<CivilSyllabus />}  />
-                <Route path="/academics/civil/civiltimetable" element={<CivilTimeTable />}  />
+        {/* Civil Department */}
+        <Route path="/academics/civil/overview" element={<CivilOverview />} />
+        <Route path="/academics/civil/hod" element={<CivilHod />} />
+        <Route path="/academics/civil/civilfaculty" element={<CivilFaculty />}/>
+        <Route path="/academics/civil/civillabs" element={<CivilLabs />} />
+        <Route path="/academics/civil/civilresearch" element={<CivilResearch />}/>
+        <Route path="/academics/civil/civilsyllabus" element={<CivilSyllabus />}/>
+        <Route path="/academics/civil/civiltimetable" element={<CivilTimeTable />}/>
 
-                {/* Mechanical Department */}
-                <Route path="/academics/mechanical/overview" element={<MechOverview />} />
-                <Route path="/academics/mechanical/mechfaculty" element={<MechFaculty />}  />
-                <Route path="/academics/mechanical/hod" element={<MechHod />} />
-                <Route path="/academics/mechanical/mechlabs" element={<MechLabs />}  />
-                <Route path="/academics/mechanical/mechtimetable" element={<MechTimeTable />}  />
-                <Route path="/academics/mechanical/mechsyllabus" element={<MechSyllabus />}  />
-                <Route path="/academics/mechanical/mechresearch" element={<MechResearch />}  />
+        {/* Mechanical Department */}
+        <Route path="/academics/mechanical/overview" element={<MechOverview />}/>
+        <Route path="/academics/mechanical/mechfaculty" element={<MechFaculty />}/>
+        <Route path="/academics/mechanical/hod" element={<MechHod />} />
+        <Route path="/academics/mechanical/mechlabs" element={<MechLabs />} />
+        <Route path="/academics/mechanical/mechtimetable" element={<MechTimeTable />}/>
+        <Route path="/academics/mechanical/mechsyllabus" element={<MechSyllabus />}/>
+        <Route path="/academics/mechanical/mechresearch" element={<MechResearch />}/>
 
-                {/* Applied Sciences Department */}
-                <Route path="/academics/appliedscience/overview" element={<ASOverview />} />
-                <Route path="/academics/appliedscience/asfaculty" element={<ASFaculty />}  />
-                <Route path="/academics/appliedscience/ashod" element={<ASHod />} />
-                <Route path="/academics/appliedscience/aslabs" element={<ASLabs />}  />
-                <Route path="/academics/appliedscience/asresearch" element={<ASResearch />}  />
-                <Route path="/academics/appliedscience/astimetable" element={<ASTimeTable />}  />
-                <Route path="/academics/appliedscience/assyllabus" element={<ASSyllabus />}  />
+        {/* Applied Sciences Department */}
+        <Route path="/academics/appliedscience/overview" element={<ASOverview />}/>
+        <Route path="/academics/appliedscience/asfaculty" element={<ASFaculty />}/>
+        <Route path="/academics/appliedscience/ashod" element={<ASHod />} />
+        <Route path="/academics/appliedscience/aslabs" element={<ASLabs />} />
+        <Route path="/academics/appliedscience/asresearch" element={<ASResearch />}/>
+        <Route path="/academics/appliedscience/astimetable" element={<ASTimeTable />}/>
+        <Route path="/academics/appliedscience/assyllabus" element={<ASSyllabus />}/>
 
-            </Routes>
-            <Footer/>
-        </HashRouter>
-    );
+        {/* Notices */}
+        <Route path="/magazine/fingerprint-vii-1" element={<FingerPrintIssue1 />} />
+        <Route path="/magazine/fingerprint-vii-2" element={<FingerPrintIssue2 />} />
+        <Route path="/notices/exam-notice-1" element={<ExamNotice1 />} />
+        <Route path="/notices/exam-notice-2" element={<ExamNotice2 />} />
+
+      </Routes>
+      <Footer />
+    </HashRouter>
+  );
 }
 
 export default App;
