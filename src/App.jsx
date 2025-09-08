@@ -53,6 +53,7 @@ import FingerPrintIssue1 from "./pages/FingerPrint/FingerPrint1.jsx";
 import FingerPrintIssue2 from "./pages/FingerPrint/FingerPrint2.jsx";
 import ExamNotice1 from "./pages/ExamNotice/ExamNotice1.jsx";
 import ExamNotice2 from "./pages/ExamNotice/ExamNotice2.jsx";
+import Scholarship from './pages/Students-Section/Scholarship.jsx';
 
 // ECE Department
 import EceOverview from "./pages/ECE-Department/ece-overview.jsx";
@@ -122,6 +123,8 @@ function App() {
         <Route path="/boys-hostel" element={<BoysHostel/>}/>
         <Route path="/girls-hostel" element={<GirlsHostel/>}/>
         <Route path="/sports-facilities" element={<SportsFacility/>}/>
+        <Route path="/scholarships" element={<Scholarship />} />
+
 
         {/* About Section */}
         <Route path="/about/academic-heads" element={<Academicheads />} />
